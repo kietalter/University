@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tổng hợp pháp luật đại cương (Chương 2 đến 6)</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+  --bg-page:#fbfaf8;
+  --surface-1:#f1efea;
+  --surface-2:#ffffff;
+  --text-primary:#1f1e1c;
+  --text-secondary:#5d5b56;
+  --text-muted:#8a8780;
+  --border:rgba(31,30,28,.14);
+  --border-strong:rgba(31,30,28,.28);
+  --bg-accent:#e4eefb;
+  --text-accent:#1b4f94;
+  --border-accent:#86b0e6;
+  --bg-warning:#fcefd6;
+  --text-warning:#80530a;
+  --radius:8px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg-page:#1a1917;
+    --surface-1:#262522;
+    --surface-2:#201f1d;
+    --text-primary:#efede8;
+    --text-secondary:#b3b0a8;
+    --text-muted:#85827b;
+    --border:rgba(239,237,232,.16);
+    --border-strong:rgba(239,237,232,.32);
+    --bg-accent:#1f3250;
+    --text-accent:#9cc3f5;
+    --border-accent:#3f6aa6;
+    --bg-warning:#42330f;
+    --text-warning:#f0c978;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg-page:#1a1917;
+  --surface-1:#262522;
+  --surface-2:#201f1d;
+  --text-primary:#efede8;
+  --text-secondary:#b3b0a8;
+  --text-muted:#85827b;
+  --border:rgba(239,237,232,.16);
+  --border-strong:rgba(239,237,232,.32);
+  --bg-accent:#1f3250;
+  --text-accent:#9cc3f5;
+  --border-accent:#3f6aa6;
+  --bg-warning:#42330f;
+  --text-warning:#f0c978;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg-page);color:var(--text-primary);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5}
+.page{max-width:800px;margin:0 auto;padding:20px 16px 32px}
+h1{font-size:20px;font-weight:600;margin:0 0 6px;line-height:1.3}
+.intro{font-size:13px;color:var(--text-secondary);margin:0 0 14px;line-height:1.55}
+.intro .tg{margin-right:4px}
+button{font:inherit;color:var(--text-primary);background:var(--surface-2);border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:6px 12px;cursor:pointer}
+button:hover{background:var(--surface-1)}
+button:focus-visible{outline:2px solid var(--text-accent);outline-offset:2px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.tabs button{font-size:14px}
+.tabs button.on{background:var(--bg-accent);border-color:var(--border-accent);color:var(--text-accent)}
+.bar{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:13px;color:var(--text-secondary)}
+.row{border:0.5px solid var(--border);border-radius:12px;background:var(--surface-2);margin:0 0 8px;overflow:hidden}
+.hd{display:flex;align-items:center;gap:12px;width:100%;padding:10px 14px;border:none;border-radius:0;background:transparent;text-align:left;cursor:pointer}
+.hd:hover{background:var(--surface-1)}
+.num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--bg-accent);color:var(--text-accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500}
+.t{font-size:15px;font-weight:500;color:var(--text-primary)}
+.k{font-size:13px;color:var(--text-secondary);line-height:1.4}
+.bd{padding:2px 16px 12px 52px;font-size:14px;line-height:1.65;color:var(--text-primary)}
+.bd ul{margin:0;padding-left:16px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.tg{font-size:12px;padding:2px 10px;border-radius:var(--radius);background:var(--bg-accent);color:var(--text-accent);display:inline-block}
+.tg.w{background:var(--bg-warning);color:var(--text-warning)}
+.ch{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0}
+.ch .a{color:var(--text-muted)}
+.ch .b{font-size:12px;padding:3px 10px;border-radius:var(--radius);border:0.5px solid var(--border-strong);background:var(--surface-1)}
+.gd{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin:6px 0}
+.bx{border:0.5px solid var(--border);border-radius:var(--radius);background:var(--surface-1);padding:8px 10px;font-size:13px;line-height:1.55}
+.bx b{display:block;font-size:13px;color:var(--text-accent);margin-bottom:2px}
+.bx ul{padding-left:14px}
+.ly{margin:6px 0}
+.lb{border:0.5px solid var(--border-accent);background:var(--bg-accent);border-radius:var(--radius);padding:8px 10px;font-size:13px;line-height:1.55}
+.lb b{color:var(--text-accent)}
+.ar{text-align:center;font-size:12px;color:var(--text-muted);padding:3px 0}
+.hide .bd{display:none}
+.hide .row.open .bd{display:block}
+@media (max-width:480px){
+  .bd{padding-left:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Tổng hợp pháp luật đại cương (Chương 2 đến 6)</h1>
+<p class="intro">Tổng hợp theo các nội dung đã học và các câu hỏi đã trao đổi. Mục có nhãn <span class="tg w">cần đối chiếu</span> là phần dựa trên kiến thức chung hoặc trang ôn tập, chưa có trong tài liệu của thầy.</p>
+<div class="tabs" id="tb"></div>
+<div class="bar"><button id="tg">Che chi tiết</button><span id="hint">Đang hiện đầy đủ</span></div>
+<div id="w"></div>
+</div>
+<script>
+var ul=function(a){return "<ul>"+a.map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>"};
+var chips=function(a,c){return "<div class='tags'>"+a.map(function(x){return "<span class='tg"+(c?" "+c:"")+"'>"+x+"</span>"}).join("")+"</div>"};
+var chain=function(a){return "<div class='ch'>"+a.map(function(x,i){return (i?"<span class='a'>→</span>":"")+"<span class='b'>"+x+"</span>"}).join("")+"</div>"};
+var grid=function(a){return "<div class='gd'>"+a.map(function(x){return "<div class='bx'><b>"+x[0]+"</b>"+ul(x[1])+"</div>"}).join("")+"</div>"};
+var layers=function(a){return "<div class='ly'>"+a.map(function(x,i){return (i?"<div class='ar'>↓ chỉ khi không còn ai ở hàng trước</div>":"")+"<div class='lb'><b>"+x[0]+":</b> "+x[1]+"</div>"}).join("")+"</div>"};
+var flag=function(s){return chips([s||"Kiến thức chung, cần đối chiếu với bài giảng của thầy"],"w")};
+var TABS=[["c2","Chương 2"],["c3","Chương 3"],["c4","Chương 4"],["c5","Chương 5"],["c6","Chương 6"],["tr","Cặp dễ nhầm"],["dc","Cần đối chiếu"]];
+var D={
+c2:[
+{t:"Nguồn gốc nhà nước",k:"Nguyên thủy → phân công lao động → tư hữu → giai cấp → nhà nước",b:ul(["Xã hội nguyên thủy chưa có nhà nước, dựa trên 3 cơ sở: <b>kinh tế</b> (sản xuất tự nhiên, bình đẳng, sở hữu chung), <b>xã hội</b> (thị tộc mẫu hệ: cùng huyết thống, dòng dõi theo mẹ, tự quản bằng phong tục và uy tín), <b>tư tưởng</b> (tin vào thượng đế, đấng tối cao)","Tư hữu là chuyện tài sản (tư liệu sản xuất thuộc cá nhân), giai cấp là các nhóm người khác nhau về vị trí với tư liệu sản xuất. Tư hữu là nguyên nhân, giai cấp là kết quả"])+chain(["3 lần phân công lao động: chăn nuôi tách trồng trọt, thủ công nghiệp, thương nghiệp","Của cải dư thừa","Tư hữu","Phân chia giai cấp","Mâu thuẫn không điều hòa được","Nhà nước"])},
+{t:"Bản chất và chức năng",k:"Nhà nước của ai, làm gì",b:ul(["Bản chất: tính giai cấp và tính xã hội","Chức năng: các việc nhà nước làm, chia thành đối nội và đối ngoại"])+flag("Chưa có trong ảnh tài liệu, giải thích theo kiến thức chung")},
+{t:"5 đặc trưng của nhà nước",k:"Lãnh thổ, quyền lực công, chủ quyền, pháp luật, thuế",b:ul(["<b>Lãnh thổ:</b> quản lý dân cư theo lãnh thổ, không theo giới tính, tuổi, huyết thống, tín ngưỡng. Lãnh thổ cố định (trên bộ, trên không, trên biển, trong lòng đất) và di động (tàu, máy bay)","<b>Quyền lực công đặc biệt:</b> lập pháp (Quốc hội), hành pháp (Chính phủ), tư pháp (Tòa án, Viện kiểm sát); tách khỏi xã hội, do công chức và bộ máy cưỡng chế thực hiện","<b>Chủ quyền quốc gia:</b> tự quyết, độc lập, tối cao","<b>Pháp luật:</b> duy nhất có quyền ban hành và đảm bảo thực hiện; Nhà nước cũng phải tuân theo","<b>Thuế:</b> thu thuế, phí, lệ phí bắt buộc"])},
+{t:"Hình thức nhà nước (3 yếu tố)",k:"Chính thể, cấu trúc, chế độ chính trị",b:grid([["Chính thể: ai đứng đầu",["Quân chủ (vua, cha truyền con nối): tuyệt đối (vua toàn quyền, phong kiến Trung Quốc, Việt Nam), hạn chế (Anh, Nhật Bản, Thái Lan, Campuchia)","Cộng hòa (người đứng đầu do bầu): đại nghị (nghị viện là trung tâm, nguyên thủ tượng trưng: Đức, Ấn Độ, Ireland), tổng thống (vừa là nguyên thủ vừa đứng đầu Chính phủ, không có Thủ tướng: Mỹ, Hàn Quốc), lưỡng tính (kết hợp: Pháp, Ba Lan, Nga)"]],["Cấu trúc: lãnh thổ tổ chức thế nào",["Đơn nhất: 1 lãnh thổ, 1 hệ thống cơ quan trung ương, 1 hệ thống pháp luật, 1 quốc tịch","Liên bang: nhiều nhà nước thành viên, pháp luật chung và riêng, 2 quốc tịch (Mỹ, Ấn Độ)"]],["Chế độ chính trị: cách thực hiện quyền lực",["Dân chủ: nhân dân có quyền hình thành bộ máy, tham gia, kiểm tra, giám sát","Phản dân chủ: không đảm bảo quyền tự do của công dân"]]])+ul(["Quân chủ khác cộng hòa ở cách có được vị trí đứng đầu: cha truyền con nối hay do bầu. Quân chủ tuyệt đối thường gắn với phong kiến, quân chủ hạn chế với tư bản"])+flag("Tài liệu ghi Áo ở cả đại nghị lẫn lưỡng tính; Indonesia ghi là liên bang (thực tế là đơn nhất). Học theo tài liệu của thầy")},
+{t:"4 kiểu nhà nước",k:"Chủ nô, phong kiến, tư sản, xã hội chủ nghĩa",b:ul(["<b>Chủ nô:</b> tư hữu tư liệu sản xuất và nô lệ; đối kháng chủ nô – nô lệ; đa thần giáo","<b>Phong kiến:</b> tư hữu đất đai của địa chủ; địa chủ, nông dân, thợ thủ công; các tôn giáo lớn","<b>Tư sản:</b> tư hữu tư bản, bóc lột giá trị thặng dư (phần giá trị dôi ra mà người lao động làm ra nhưng không được trả); tư sản – vô sản; đa nguyên, đa đảng","<b>Xã hội chủ nghĩa:</b> công hữu về tư liệu sản xuất; liên minh các giai cấp; tư tưởng Mác – Lênin","Ba kiểu đầu đều dựa trên tư hữu và bóc lột, chỉ khác đối tượng bị bóc lột"])},
+{t:"Bộ máy nhà nước Việt Nam",k:"Quốc hội, Chủ tịch nước, Chính phủ, Tòa án, Viện kiểm sát",b:ul(["<b>Hệ thống chính trị:</b> Đảng là hạt nhân (lãnh đạo, đề ra đường lối), Nhà nước là trụ cột, Mặt trận Tổ quốc là nền tảng","<b>Quốc hội:</b> cơ quan quyền lực nhà nước cao nhất, cơ quan đại biểu cao nhất của nhân dân; lập hiến, lập pháp, quyết định vấn đề quan trọng, giám sát tối cao","<b>Chủ tịch nước:</b> nguyên thủ quốc gia, thay mặt nước đối nội và đối ngoại; không thuộc ba quyền lập pháp, hành pháp, tư pháp","<b>Chính phủ:</b> cơ quan hành chính nhà nước cao nhất, hành pháp, cơ quan chấp hành của Quốc hội","<b>Tòa án:</b> xét xử (quyền tư pháp). <b>Viện kiểm sát:</b> thực hành quyền công tố (truy tố, buộc tội), kiểm sát hoạt động tư pháp","Ba quyền: lập pháp là làm luật, hành pháp là thực hiện luật, tư pháp là bảo vệ luật"])+chain(["Nhân dân bầu trực tiếp","HĐND","HĐND bầu ra","UBND"])+flag("Phần HĐND, UBND chưa có trong ảnh tài liệu. Nội dung dựa trên kiến thức chung")},
+{t:"Nhà nước pháp quyền",k:"Pháp luật ở vị trí cao nhất, nhà nước cũng bị pháp luật ràng buộc",b:ul(["Pháp luật giữ vị trí tối cao trong mọi lĩnh vực của đời sống xã hội","Nhà nước, cơ quan nhà nước, công chức đều bị ràng buộc bởi pháp luật","Trách nhiệm của nhà nước và công dân được xác định rõ trên cơ sở pháp luật","Không phải một kiểu nhà nước như chủ nô hay tư sản: nó nói về cách vận hành quyền lực"])+flag("Chưa có trong ảnh tài liệu, dựa trên kiến thức chung")}],
+c3:[
+{t:"Nguồn gốc và khái niệm pháp luật",k:"2 cách ban hành, 3 cách đảm bảo thực hiện",b:ul(["Xã hội nguyên thủy chỉ có quy tắc xử sự chung (tập quán, tín điều tôn giáo)","2 cách Nhà nước ban hành pháp luật: giữ lại, vận dụng, biến đổi tập quán có lợi; ban hành quy định mới cho quan hệ xã hội mới","Khái niệm: hệ thống quy tắc xử sự do Nhà nước ban hành hoặc thừa nhận, đảm bảo thực hiện, điều chỉnh quan hệ xã hội theo ý chí Nhà nước","3 cách đảm bảo: giáo dục, bắt buộc thực hiện, cưỡng chế thi hành"])},
+{t:"Pháp luật khác đạo đức",k:"4 tiêu chí",b:ul(["Hình thành: Nhà nước ban hành / dựa trên giá trị văn hóa, truyền thống, nhận thức cá nhân","Bảo đảm: cưỡng chế và giáo dục / tự nguyện và dư luận xã hội","Chặt chẽ: pháp luật chặt chẽ hơn","Phạm vi: hầu hết quan hệ xã hội / quan hệ tình cảm trong gia đình, cơ quan"])},
+{t:"3 thuộc tính, 2 bản chất, chức năng",k:"Quy phạm phổ biến, xác định chặt chẽ về hình thức, quyền lực bắt buộc chung",b:ul(["<b>Quy phạm phổ biến:</b> khuôn mẫu, chuẩn mực chung cho mọi người, tác động rộng trên toàn lãnh thổ (ví dụ cùng một tội danh, mọi người bị xét xử như nhau)","<b>Xác định chặt chẽ về hình thức</b> (không phải nội dung): hình thức nhất định, ngôn ngữ chính xác, dễ hiểu, xây dựng theo trình tự, thủ tục, thẩm quyền chặt chẽ","<b>Quyền lực bắt buộc chung:</b> bắt buộc với mọi chủ thể, Nhà nước dùng biện pháp để bắt buộc thực hiện","<b>Bản chất:</b> tính giai cấp (ý chí giai cấp thống trị) và tính xã hội (lợi ích các tầng lớp khác, phương tiện xác lập quan hệ xã hội)"])+chips(["Chức năng: điều chỉnh (quy định cách xử sự)","bảo vệ (xử lý khi có vi phạm)","giáo dục (nâng cao ý thức)"])+flag("Phần chức năng của pháp luật chưa có trong tài liệu, dựa trên kiến thức chung")},
+{t:"Hình thức pháp luật",k:"Bên trong (cấu trúc) và bên ngoài (cách thể hiện)",b:ul(["<b>Bên trong:</b> hệ thống pháp luật → ngành luật → chế định pháp luật → quy phạm pháp luật (từ lớn đến nhỏ)","<b>Bên ngoài:</b> tập quán pháp, tiền lệ pháp (án lệ), văn bản quy phạm pháp luật"])+flag("Nguyên tắc pháp luật thuộc hình thức bên trong theo đáp án câu 18, tài liệu liệt kê 4 cấp ở trên")},
+{t:"Văn bản quy phạm pháp luật",k:"Khác văn bản áp dụng pháp luật; ai ban hành văn bản nào",b:ul(["Văn bản quy phạm pháp luật: do cơ quan nhà nước có thẩm quyền ban hành, chứa quy tắc xử sự chung, áp dụng nhiều lần. Văn bản áp dụng pháp luật (bản án, quyết định xử phạt) dành cho một người, một việc cụ thể","Quốc hội: Hiến pháp, Luật, Bộ luật, Nghị quyết. Ủy ban Thường vụ Quốc hội: Pháp lệnh, Nghị quyết","Chủ tịch nước: Lệnh (công bố luật), Quyết định","Chính phủ: Nghị định, Nghị quyết. Thủ tướng: Quyết định","Bộ trưởng, Chánh án TANDTC, Viện trưởng VKSNDTC: Thông tư. Giữa các cơ quan: Thông tư liên tịch","Hội đồng Thẩm phán TANDTC: Nghị quyết. Tổng Kiểm toán nhà nước: Quyết định","HĐND: Nghị quyết. UBND: Quyết định"])+grid([["Nghị quyết",["Tập thể biểu quyết"]],["Nghị định",["Chỉ Chính phủ ban hành, hướng dẫn thi hành luật"]],["Quyết định",["Một người đứng đầu quyết"]],["Thông tư",["Người đứng đầu ngành, hướng dẫn trong ngành mình"]]])+ul(["Hiến pháp: đạo luật cơ bản, hiệu lực cao nhất. Bộ luật: một lĩnh vực lớn, rất chi tiết (Dân sự, Hình sự). Luật: một lĩnh vực hẹp hơn. Cùng do Quốc hội ban hành","Hiệu lực cao đến thấp (gần đúng): Hiến pháp, Luật và Bộ luật, Pháp lệnh, Lệnh và Quyết định của Chủ tịch nước, Nghị định, Quyết định của Thủ tướng, Thông tư"])+flag("Quyết định có thể là văn bản quy phạm hoặc áp dụng tùy nội dung; thứ bậc ở trên là gần đúng, đối chiếu bài giảng")}],
+c4:[
+{t:"Hệ thống pháp luật",k:"Quốc gia, quốc tế (Civil Law, Common Law, Hồi giáo...)",b:grid([["Civil Law",["Châu Âu lục địa, phổ biến nhất","Nguồn luật: văn bản quy phạm","Có phân chia công pháp và tư pháp","Tố tụng thẩm vấn"]],["Common Law",["Anh, Mỹ, Ấn Độ, Canada, Úc","Nguồn luật chủ yếu: án lệ","Không phân chia công, tư","Tố tụng tranh tụng"]],["Hồi giáo",["Đạo Hồi là quốc đạo","Nguồn luật: văn bản nhà nước và tổ chức tôn giáo","Không được trái Đạo Hồi"]]])+ul(["Hệ thống pháp luật quốc gia: toàn bộ quy phạm của luật thực định (luật đang có hiệu lực) ở nước đó, ra đời trước hệ thống pháp luật quốc tế","Công pháp: Nhà nước với cá nhân, tổ chức (mệnh lệnh – phục tùng). Tư pháp (nhóm luật): cá nhân, tổ chức với nhau (bình đẳng, thỏa thuận)","Án lệ: bản án làm khuôn mẫu cho vụ tương tự. Thẩm vấn: thẩm phán chủ động. Tranh tụng: hai bên đưa chứng cứ, phản bác nhau"])+flag("Tài liệu liệt kê 3 hệ và xếp Việt Nam vào Civil Law; đề và trang ôn tập chia 4 nhóm (thêm pháp luật xã hội chủ nghĩa). Hỏi thầy chốt cách nào")},
+{t:"Quy phạm pháp luật và cấu trúc",k:"Giả định, quy định, chế tài",b:ul(["Quy phạm: quy tắc xử sự chung, do Nhà nước ban hành, nội dung xác định quyền và nghĩa vụ, bắt buộc chung","<b>Giả định:</b> ai, hoàn cảnh nào. Bộ phận không thể thiếu (đơn giản hoặc phức tạp)","<b>Quy định:</b> xử sự thế nào, bộ phận chủ yếu, cơ sở truy cứu trách nhiệm. Mệnh lệnh (phải/không được làm), tùy nghi (tự lựa chọn, thỏa thuận), giao quyền","<b>Chế tài:</b> vi phạm thì bị gì. Hình sự, hành chính, dân sự, kỷ luật","Không nhất thiết đủ 3 bộ phận, thứ tự không cố định"])},
+{t:"Quan hệ pháp luật",k:"3 đặc điểm, 4 loại",b:ul(["Đặc điểm: mang tính ý chí; các bên có quyền, nghĩa vụ do pháp luật quy định; Nhà nước đảm bảo thực hiện","<b>Hình sự:</b> Nhà nước với người phạm tội (cưỡng chế). <b>Hành chính:</b> cơ quan quản lý nhà nước với cá nhân, tổ chức (mệnh lệnh – phục tùng). <b>Dân sự:</b> cá nhân, tổ chức với nhau (thỏa thuận). <b>Kinh tế:</b> chủ thể kinh doanh với nhau (sinh lời)"])},
+{t:"Chủ thể",k:"Năng lực chủ thể = năng lực pháp luật + năng lực hành vi",b:ul(["<b>Năng lực pháp luật:</b> khả năng hưởng quyền và nghĩa vụ; có từ khi sinh ra, chỉ mất khi chết; ai cũng như nhau","<b>Năng lực hành vi:</b> khả năng tự tham gia quan hệ; phụ thuộc tuổi và nhận thức. Dưới 6 tuổi: không có; từ đủ 6 đến dưới 18: chưa đầy đủ; từ đủ 18: đầy đủ. Có thể mất, bị hạn chế hoặc khó khăn nhận thức","Năng lực pháp luật là điều kiện cần, năng lực hành vi là điều kiện đủ","<b>Tổ chức:</b> năng lực pháp luật có từ khi thành lập hợp pháp (Nhà nước cho phép hoặc công nhận), mất khi chấm dứt hoạt động; năng lực hành vi qua người đại diện theo pháp luật","<b>Pháp nhân (4 điều kiện):</b> thành lập hợp pháp, cơ cấu tổ chức chặt chẽ, tài sản độc lập, nhân danh mình tham gia quan hệ độc lập. Tổ chức không là pháp nhân vẫn là chủ thể nhưng bị hạn chế"])},
+{t:"Nội dung và khách thể",k:"Quyền và nghĩa vụ; lợi ích mong muốn",b:ul(["<b>Quyền:</b> cách xử sự pháp luật cho phép (được làm); biểu hiện: tự xử sự, yêu cầu bên kia thực hiện nghĩa vụ, yêu cầu Nhà nước bảo vệ","<b>Nghĩa vụ:</b> cách xử sự bắt buộc (phải làm, không được làm), chịu trách nhiệm nếu sai. Ví dụ: nộp thuế là bình đẳng về nghĩa vụ pháp lý","<b>Khách thể của quan hệ pháp luật:</b> lợi ích vật chất, tinh thần mà các bên mong muốn đạt được"])+flag("Đối tượng tác động (vật, người cụ thể bị hành vi tác động) khác khách thể: giải thích theo kiến thức chung")},
+{t:"Sự kiện pháp lý",k:"Sự biến và hành vi",b:ul(["Sự kiện làm phát sinh, thay đổi, chấm dứt quan hệ pháp luật","<b>Sự biến:</b> không phụ thuộc ý muốn con người (thiên tai, hỏa hoạn)","<b>Hành vi:</b> có ý chí con người (hợp pháp hoặc bất hợp pháp)"])}],
+c5:[
+{t:"Thực hiện pháp luật và 4 hình thức",k:"Khái niệm chung bao trùm 4 hình thức",b:ul(["Thực hiện pháp luật: quá trình hoạt động có mục đích mà các chủ thể bằng hành vi của mình thực hiện các quy định của pháp luật trong thực tiễn","<b>Tuân thủ:</b> không làm điều pháp luật cấm (quy phạm cấm trong luật hình sự, hành chính)","<b>Thi hành:</b> thực hiện nghĩa vụ bằng hành động tích cực (nộp thuế, trang bị phòng cháy chữa cháy)","<b>Sử dụng:</b> thực hiện quyền để bảo vệ lợi ích hợp pháp","<b>Áp dụng:</b> Nhà nước thông qua cơ quan hoặc người có thẩm quyền tổ chức cho chủ thể thực hiện quyền và nghĩa vụ"])},
+{t:"Áp dụng pháp luật",k:"4 trường hợp và 4 bước",b:ul(["Khi có vi phạm pháp luật xảy ra","Khi quyền và nghĩa vụ không thể phát sinh, thay đổi, chấm dứt nếu thiếu sự can thiệp của nhà nước","Khi có tranh chấp mà các chủ thể không tự giải quyết được, yêu cầu nhà nước giải quyết","Khi cần có sự tham gia của Nhà nước trong việc thực hiện quan hệ pháp luật"])+chain(["Phân tích, làm sáng tỏ tình tiết vụ việc","Lựa chọn quy phạm cần áp dụng","Ban hành văn bản áp dụng pháp luật","Tổ chức thực hiện văn bản"])},
+{t:"Vi phạm pháp luật",k:"4 dấu hiệu và 4 loại",b:grid([["Hành vi trái pháp luật",["Hành động hoặc không hành động","Làm điều cấm; không làm điều yêu cầu; làm không đúng yêu cầu; thực hiện quyền vượt quá phạm vi"]],["Có lỗi",["Cố ý hoặc vô ý","Có khả năng nhận thức hậu quả và có nhiều lựa chọn nhưng chọn làm trái","Sự kiện bất ngờ, phòng vệ chính đáng, tình thế cấp thiết không phải vi phạm"]],["Chủ thể có năng lực trách nhiệm pháp lý",["Tổ chức luôn có","Cá nhân: nhận thức bình thường và đủ tuổi"]],["Xâm hại quan hệ xã hội được pháp luật bảo vệ",["Ví dụ: quan hệ sở hữu tài sản, quan hệ nhân thân"]]])+grid([["Hình sự",["Xâm hại độc lập, chủ quyền, tính mạng, sức khỏe, tài sản","Chủ thể: cá nhân"]],["Dân sự",["Xâm hại quan hệ tài sản, nhân thân","Chủ thể: cá nhân hoặc tổ chức"]],["Hành chính",["Xâm phạm quy tắc quản lý của Nhà nước","Chủ thể: cá nhân hoặc tổ chức"]],["Kỷ luật",["Xâm hại trật tự trong tổ chức","Chủ thể: cá nhân trong tổ chức"]]])},
+{t:"Cấu thành vi phạm pháp luật (4 yếu tố)",k:"Mặt khách quan, mặt chủ quan, chủ thể, khách thể",b:grid([["Mặt khách quan",["Hành vi trái pháp luật","Hậu quả: thiệt hại tài sản, tinh thần, thể chất, hoặc nguy cơ gây thiệt hại","Quan hệ nhân quả: hành vi là nguyên nhân trực tiếp, thiệt hại là kết quả tất yếu","Thời gian, địa điểm, công cụ, phương tiện"]],["Mặt chủ quan",["Lỗi: thái độ với hành vi và hậu quả","Động cơ: nguyên nhân bên trong thúc đẩy","Mục đích: kết quả cuối cùng muốn đạt"]],["Chủ thể",["Cá nhân, tổ chức có năng lực trách nhiệm pháp lý","Tuổi: hình sự, hành chính từ 14; lao động từ 15; còn lại từ 18"]],["Khách thể",["Quan hệ xã hội được pháp luật bảo vệ bị xâm hại","Phân biệt với đối tượng tác động"]]])+ul(["Không có hành vi trái pháp luật thì không có vi phạm (suy nghĩ chưa phải hành vi)","Hành vi không hành động cũng có thể là nguyên nhân (không đặt rào cảnh báo hố đào)"])},
+{t:"4 loại lỗi",k:"Cố ý trực tiếp, cố ý gián tiếp, vô ý quá tự tin, vô ý cẩu thả",b:grid([["Cố ý trực tiếp",["Nhận thức hậu quả và mong muốn xảy ra","Ví dụ: cướp giật túi xách, đánh người gây thương tích"]],["Cố ý gián tiếp",["Nhận thức hậu quả, không mong muốn nhưng mặc cho xảy ra","Ví dụ: giăng dây điện trần quanh ao cá, người đi qua bị điện giật"]],["Vô ý do quá tự tin",["Nhận thức hậu quả nhưng tin sẽ không xảy ra","Ví dụ: tài xế cố đi qua đoạn đường có nước lũ chảy xiết"]],["Vô ý do cẩu thả",["Không nhận thức dù có trách nhiệm và có thể nhận thức","Ví dụ: người đi bộ qua đường vô thức khiến hai xe đâm nhau"]]])},
+{t:"Trách nhiệm pháp lý",k:"Quan hệ đặc biệt giữa Nhà nước và chủ thể vi phạm",b:ul(["Chủ thể vi phạm phải gánh chịu hậu quả bất lợi, biện pháp cưỡng chế quy định trong chế tài","Cơ sở thực tế: vi phạm pháp luật. Cơ sở pháp lý: quyết định của cơ quan nhà nước có thẩm quyền","Không truy cứu khi: chủ thể không có năng lực trách nhiệm pháp lý, sự kiện bất ngờ, phòng vệ chính đáng, thực hiện phù hợp với tình thế cấp thiết"])+grid([["Hình sự",["Tòa án áp dụng theo Bộ luật Hình sự"]],["Hành chính",["Với chủ thể vi phạm pháp luật hành chính"]],["Dân sự",["Với chủ thể vi phạm pháp luật dân sự"]],["Kỷ luật",["Với chủ thể vi phạm kỷ luật"]]])+ul(["Một hành vi có thể kéo theo nhiều loại trách nhiệm (đánh người: hình sự và bồi thường dân sự)"])}],
+c6:[
+{t:"Luật hình sự: tội phạm",k:"Nhà nước với người phạm tội, phương pháp quyền uy",b:ul(["Tội phạm: hành vi nguy hiểm cho xã hội quy định trong Bộ luật Hình sự, do người có năng lực trách nhiệm hình sự thực hiện cố ý hoặc vô ý, xâm phạm quan hệ xã hội được luật bảo vệ"])+chain(["Ít nghiêm trọng: đến 3 năm","Nghiêm trọng: đến 7 năm","Rất nghiêm trọng: đến 15 năm","Đặc biệt nghiêm trọng: trên 15 năm, chung thân, tử hình"])+ul(["Tính theo mức cao nhất của khung hình phạt. Ví dụ khung đến 9 năm là rất nghiêm trọng"])},
+{t:"Cấu thành tội phạm và tuổi",k:"4 yếu tố",b:grid([["Mặt khách quan",["Hành vi nguy hiểm","Hậu quả nguy hiểm","Quan hệ nhân quả","Phương tiện, thời gian, địa điểm"]],["Mặt chủ quan",["Lỗi cố ý hoặc vô ý","Động cơ","Mục đích"]],["Khách thể",["Quan hệ xã hội được luật hình sự bảo vệ bị xâm hại"]],["Chủ thể",["Người có năng lực trách nhiệm hình sự, đủ tuổi"]]])+chips(["Từ đủ 16: chịu trách nhiệm mọi tội","Từ đủ 14 đến dưới 16: tội rất nghiêm trọng do cố ý, tội đặc biệt nghiêm trọng"])},
+{t:"Các trường hợp liên quan đến phạm tội",k:"Không bị truy cứu, không phải tội phạm, giai đoạn, đồng phạm",b:ul(["<b>Không bị truy cứu:</b> sự kiện bất ngờ; mắc bệnh tâm thần mất khả năng nhận thức (không áp dụng nếu do say rượu, chất kích thích)","<b>Không phải tội phạm:</b> phòng vệ chính đáng, tình thế cấp thiết (gây thiệt hại nhỏ hơn thiệt hại cần ngăn ngừa), rủi ro khi nghiên cứu khoa học đã tuân thủ quy trình","<b>Chuẩn bị phạm tội:</b> chỉ chịu trách nhiệm nếu định phạm tội rất nghiêm trọng hoặc đặc biệt nghiêm trọng","<b>Chưa đạt:</b> không thực hiện đến cùng vì nguyên nhân ngoài ý muốn, vẫn chịu trách nhiệm","<b>Tự ý nửa chừng chấm dứt:</b> tự dừng khi không có gì ngăn cản, được miễn trách nhiệm về tội định phạm","<b>Che giấu:</b> không hứa hẹn trước. <b>Không tố giác:</b> biết mà không báo; người thân chỉ chịu trách nhiệm với tội xâm phạm an ninh quốc gia hoặc tội đặc biệt nghiêm trọng"])+chips(["Đồng phạm: người tổ chức (chủ mưu)","người thực hành (trực tiếp)","người xúi giục","người giúp sức"])},
+{t:"Hình phạt",k:"Biện pháp cưỡng chế nghiêm khắc nhất của Nhà nước",b:grid([["Hình phạt chính",["Cảnh cáo","Phạt tiền","Cải tạo không giam giữ","Trục xuất","Tù có thời hạn","Tù chung thân","Tử hình"]],["Hình phạt bổ sung",["Cấm đảm nhiệm chức vụ, cấm hành nghề","Cấm cư trú","Quản chế","Tước một số quyền công dân","Tịch thu tài sản","Phạt tiền","Trục xuất"]]])+ul(["Hình phạt chính áp dụng độc lập; mỗi tội chỉ 1 hình phạt chính, có thể nhiều hình phạt bổ sung; không áp dụng hình phạt bổ sung với người chưa thành niên"])+flag("Tạm giam là biện pháp ngăn chặn trong tố tụng, trại giáo dưỡng là biện pháp xử lý hành chính: đều không phải hình phạt (kiến thức chung)")},
+{t:"Luật dân sự: sở hữu và hợp đồng",k:"Quan hệ tài sản, nhân thân; phương pháp thỏa thuận",b:ul(["Điều chỉnh quan hệ tài sản (vật, tiền, giấy tờ có giá, quyền tài sản) và quan hệ nhân thân (danh dự, nhân phẩm, uy tín); chủ thể độc lập, bình đẳng, tự nguyện, thỏa thuận"])+grid([["Chiếm hữu",["Nắm giữ, quản lý, chi phối tài sản trực tiếp hoặc gián tiếp; gồm cả người thuê, người mượn"]],["Sử dụng",["Khai thác công dụng, hưởng hoa lợi, lợi tức"]],["Định đoạt",["Quan trọng nhất: chuyển giao, từ bỏ, tiêu dùng, tiêu hủy"]]])+ul(["Hợp đồng: thỏa thuận xác lập, thay đổi, chấm dứt quyền, nghĩa vụ; tự do thỏa thuận nhưng không trái pháp luật, đạo đức xã hội; tự nguyện, bình đẳng, thiện chí, trung thực, hợp tác","Hình thức hợp đồng: văn bản, lời nói (mua bán ngoài chợ), hành vi (mua hàng ở siêu thị, cây bán hàng tự động)"])},
+{t:"Thừa kế",k:"Theo di chúc, theo pháp luật, thế vị",b:ul(["Thời điểm mở thừa kế: lúc người có tài sản chết. Địa điểm: nơi cư trú cuối cùng. Di sản: tài sản riêng và phần trong tài sản chung","Không có quyền hưởng di sản: người bị kết án cố ý xâm phạm tính mạng, sức khỏe, danh dự người để lại di sản; vi phạm nghĩa vụ nuôi dưỡng; lừa dối, cưỡng ép, ngăn cản lập di chúc; giả mạo, sửa, hủy di chúc","<b>Di chúc:</b> người từ đủ 15 đến dưới 18 phải có cha, mẹ hoặc người giám hộ đồng ý; văn bản (không làm chứng, có làm chứng, công chứng, chứng thực) hoặc miệng (2 người làm chứng, 5 ngày ghi chép, 3 tháng hết hiệu lực nếu người lập còn minh mẫn)","Con chưa thành niên, cha, mẹ, vợ, chồng, con thành niên không có khả năng lao động vẫn hưởng 2/3 suất của một người thừa kế theo pháp luật","<b>Theo pháp luật</b> khi: không có di chúc, di chúc không hợp pháp, người thừa kế theo di chúc chết trước, cơ quan hưởng di chúc không còn, người được chỉ định từ chối, phần di sản không định đoạt","<b>Thế vị:</b> cháu hưởng phần của cha mẹ đã chết trước; chắt nếu cháu cũng chết trước; chỉ áp dụng với thừa kế theo pháp luật"])+layers([["Hàng 1","vợ, chồng, cha mẹ đẻ, cha mẹ nuôi, con đẻ, con nuôi"],["Hàng 2","ông bà nội ngoại, anh chị em ruột, cháu ruột gọi người chết là ông bà"],["Hàng 3","cụ nội ngoại, bác, chú, cậu, cô, dì ruột, cháu và chắt ruột tương ứng"]])+ul(["Cùng hàng chia di sản bằng nhau"])},
+{t:"Sở hữu trí tuệ",k:"Tác giả, sở hữu công nghiệp, giống cây trồng",b:ul(["Tài sản trí tuệ: thành quả sáng tạo của con người. Sở hữu trí tuệ: các quyền hợp pháp đối với tài sản trí tuệ"])+grid([["Quyền tác giả và quyền liên quan",["Tác phẩm văn học, nghệ thuật, khoa học","Người biểu diễn, ghi âm, ghi hình, phát sóng"]],["Sở hữu công nghiệp (6)",["Sáng chế","Kiểu dáng công nghiệp","Nhãn hiệu","Tên thương mại","Chỉ dẫn địa lý","Bí mật kinh doanh"]],["Giống cây trồng",["Một lĩnh vực riêng"]]])},
+{t:"Phòng chống tham nhũng",k:"Đủ 3 yếu tố, 9 tội, trách nhiệm công dân",b:ul(["Tham nhũng: người có chức vụ, quyền hạn lợi dụng chức vụ, quyền hạn vì vụ lợi; phải đủ cả 3 yếu tố","Cấu thành: mặt khách quan (lợi dụng chức vụ, gây tổn hại, nhân quả trực tiếp), mặt chủ quan (cố ý trực tiếp, vụ lợi), chủ thể (người có chức vụ), khách thể (hoạt động đúng đắn của cơ quan Nhà nước)","Công dân: chấp hành pháp luật, lên án, tố cáo, hợp tác xác minh, kiến nghị hoàn thiện cơ chế, góp ý xây dựng pháp luật"])+chips(["Tham ô","Nhận hối lộ","Lạm dụng chức vụ chiếm đoạt tài sản","Lợi dụng chức vụ khi thi hành công vụ","Lạm quyền","Lợi dụng ảnh hưởng để trục lợi","Giả mạo trong công tác","Đưa hối lộ","Môi giới hối lộ"])+flag("Phân biệt tố cáo (báo vi phạm của người khác), khiếu nại (quyền lợi của chính mình), giám sát, góp ý: kiến thức chung")}],
+tr:[
+{t:"Quân chủ và cộng hòa",k:"Cha truyền con nối hay do bầu. Quân chủ hạn chế vẫn có vua, quyền bị hạn chế",b:""},
+{t:"Đơn nhất và liên bang",k:"Đơn nhất là 1 (pháp luật, quốc tịch), liên bang là 2",b:""},
+{t:"Quyền lập pháp, hành pháp, tư pháp",k:"Làm luật, thực hiện luật, bảo vệ luật. Chủ tịch nước là nguyên thủ, không thuộc ba quyền",b:""},
+{t:"Truy tố và xét xử",k:"Truy tố (buộc tội) là Viện kiểm sát; xét xử (tuyên án) là Tòa án",b:""},
+{t:"HĐND và UBND",k:"Dân bầu HĐND (nghị quyết); HĐND bầu UBND (quyết định)",b:""},
+{t:"Nghị quyết, nghị định, quyết định, thông tư",k:"Tập thể; chỉ Chính phủ; một người; người đứng đầu ngành",b:""},
+{t:"Hiến pháp, bộ luật, luật",k:"Cơ bản nhất; lĩnh vực lớn, chi tiết; lĩnh vực hẹp hơn",b:""},
+{t:"Văn bản quy phạm và văn bản áp dụng",k:"Quy tắc chung nhiều lần, hay một người một việc cụ thể",b:""},
+{t:"Thuộc tính của pháp luật",k:"Chặt chẽ về hình thức (không phải nội dung); phổ biến là chuẩn mực chung cho mọi người",b:""},
+{t:"Công pháp và tư pháp",k:"Nhà nước là một bên (mệnh lệnh) hay hai bên bình đẳng. Khác quyền tư pháp (xét xử)",b:""},
+{t:"Civil Law và Common Law",k:"Văn bản, thẩm vấn, có chia công tư; hay án lệ, tranh tụng, không chia",b:""},
+{t:"Giả định, quy định, chế tài",k:"Giả định không thể thiếu, quy định là chủ yếu; không nhất thiết đủ 3",b:""},
+{t:"Năng lực pháp luật và năng lực hành vi",k:"Pháp luật từ khi sinh ra; hành vi phụ thuộc tuổi, nhận thức. Pháp nhân có năng lực từ khi thành lập hợp pháp",b:""},
+{t:"Quyền và nghĩa vụ",k:"Được làm; phải làm hoặc không được làm",b:""},
+{t:"Khách thể của quan hệ pháp luật và của vi phạm",k:"Lợi ích mong muốn đạt được; hay quan hệ xã hội bị xâm hại. Khác đối tượng tác động",b:""},
+{t:"Sự biến và hành vi",k:"Có ai chủ ý làm việc đó không",b:""},
+{t:"Tuân thủ và thi hành",k:"Không làm điều cấm; phải làm điều bắt buộc",b:""},
+{t:"Dấu hiệu và yếu tố cấu thành vi phạm",k:"4 dấu hiệu khác 4 yếu tố cấu thành, hỏi riêng từng bộ",b:""},
+{t:"Quan hệ nhân quả",k:"Hành vi là nguyên nhân trực tiếp, thiệt hại là kết quả tất yếu",b:""},
+{t:"4 loại lỗi",k:"Trực tiếp mong muốn; gián tiếp mặc kệ; quá tự tin tin không xảy ra; cẩu thả không thấy",b:""},
+{t:"Hình sự, dân sự, hành chính, kỷ luật",k:"Hình sự chỉ cá nhân; kỷ luật chỉ cá nhân trong tổ chức; dân sự và hành chính có cả tổ chức",b:""},
+{t:"Chưa đạt và tự ý nửa chừng",k:"Bị ngăn ngoài ý muốn, vẫn chịu trách nhiệm; tự dừng, được miễn",b:""},
+{t:"Che giấu và không tố giác",k:"Che giấu: không hứa hẹn trước; không tố giác: biết mà không báo",b:""},
+{t:"Hình phạt chính, bổ sung và các biện pháp khác",k:"Mỗi tội 1 hình phạt chính; tạm giam, giáo dưỡng không phải hình phạt",b:""},
+{t:"Thừa kế",k:"Hàng trước hưởng trước, cùng hàng chia đều; 2/3 suất; thế vị chỉ theo pháp luật; di chúc miệng hết hiệu lực sau 3 tháng",b:""},
+{t:"Tham nhũng",k:"Phải đủ cả 3 yếu tố",b:""},
+{t:"Đáp án trang ôn tập có thể sai",k:"Mâu thuẫn tài liệu của thầy thì theo tài liệu của thầy",b:""}],
+dc:[
+{t:"Chưa có tài liệu",k:"Cần gửi ảnh để bổ sung",b:ul(["Chương 1 (Nhập môn pháp luật đại cương): chưa có, nằm ngoài phạm vi bản này","Bản chất và chức năng nhà nước","Phần HĐND, UBND trong bộ máy nhà nước","Phần nhà nước pháp quyền","Ưu và nhược điểm của các hình thức pháp luật bên ngoài, hiệu lực văn bản quy phạm (theo thời gian, không gian, đối tượng)","Chức năng của pháp luật","Mức phạt của tội không tố giác tội phạm","Nội dung phần quyền công dân (tố cáo, khiếu nại, giám sát, góp ý) và biện pháp ngăn chặn (tạm giam)"])},
+{t:"Mâu thuẫn giữa tài liệu và trang ôn tập",k:"Hỏi thầy để chốt",b:ul(["Hệ thống pháp luật: tài liệu liệt kê 3 hệ (Civil Law, Common Law, Hồi giáo), đề câu 34 và trang ôn tập chia 4 nhóm (thêm xã hội chủ nghĩa). Tài liệu xếp Việt Nam, Trung Quốc, Nga vào Civil Law","Hình thức bên trong của pháp luật: tài liệu liệt kê 4 cấp, đáp án câu 18 coi nguyên tắc pháp luật cũng thuộc hình thức bên trong","Yếu tố tạo thành hình thức nhà nước: tài liệu ghi 3 yếu tố (chính thể, cấu trúc, chế độ chính trị), đáp án một câu trên trang ôn tập khác. Theo tài liệu của thầy","Áo ghi ở cả cộng hòa đại nghị lẫn lưỡng tính; Indonesia ghi là liên bang"])},
+{t:"Phần dựa trên kiến thức chung",k:"Đối chiếu bài giảng trước khi thi",b:ul(["Quyết định có thể là văn bản quy phạm hay văn bản áp dụng tùy nội dung","Thứ bậc hiệu lực văn bản là cách xếp gần đúng","Đối tượng tác động khác khách thể","Tạm giam là biện pháp ngăn chặn, trại giáo dưỡng là biện pháp xử lý hành chính","Định nghĩa văn bản quy phạm pháp luật (ảnh tài liệu quá nhỏ nên chưa đọc được câu định nghĩa của thầy)"])}]};
+var cur="c2",hid=false,w=document.getElementById("w"),tb=document.getElementById("tb");
+function render(){
+tb.querySelectorAll("button").forEach(function(b){b.classList.toggle("on",b.dataset.k===cur)});
+w.innerHTML="";w.classList.toggle("hide",hid);
+D[cur].forEach(function(x,i){var r=document.createElement("div");r.className="row";
+r.innerHTML="<button class='hd'><span class='num'>"+(i+1)+"</span><span><div class='t'>"+x.t+"</div><div class='k'>"+x.k+"</div></span></button>"+(x.b?"<div class='bd'>"+x.b+"</div>":"");
+r.querySelector(".hd").addEventListener("click",function(){if(hid)r.classList.toggle("open")});w.appendChild(r);});}
+TABS.forEach(function(t){var b=document.createElement("button");b.textContent=t[1];b.dataset.k=t[0];b.addEventListener("click",function(){cur=t[0];render()});tb.appendChild(b);});
+document.getElementById("tg").addEventListener("click",function(){
+hid=!hid;this.textContent=hid?"Hiện chi tiết":"Che chi tiết";
+document.getElementById("hint").textContent=hid?"Tự kiểm tra: đọc tiêu đề, tự nhớ rồi bấm mở đối chiếu":"Đang hiện đầy đủ";render();});
+render();
+</script>
+</body>
+</html>
